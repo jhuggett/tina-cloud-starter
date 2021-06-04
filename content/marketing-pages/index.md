@@ -1,7 +1,7 @@
 ---
 blocks:
   - template: diagram
-    diagramHeading: Whimsical Diagram123
+    diagramHeading: Whimsical Diagram12
     diagramDescription: This is how your schema is defined
     diagramID: Eyqu4zN7ftWZLzgBBuXE6H
   - template: message

@@ -7,13 +7,9 @@ export const createClient = () => {
 };
 
 export const createCloudClient = () => {
-  const organization = process.env.NEXT_PUBLIC_ORGANIZATION_NAME;
   const clientId = process.env.NEXT_PUBLIC_TINA_CLIENT_ID;
 
   const missingEnv: string[] = [];
-  if (!organization) {
-    missingEnv.push("NEXT_PUBLIC_ORGANIZATION_NAME");
-  }
   if (!clientId) {
     missingEnv.push("NEXT_PUBLIC_TINA_CLIENT_ID");
   }
@@ -24,7 +20,6 @@ export const createCloudClient = () => {
   }
 
   return new Client({
-    realm: organization,
     clientId,
     branch: "main",
     //customContentApiUrl: `https://q922ege2xh.execute-api.us-east-1.amazonaws.com/content/${organization}/${clientId}/github/main`,
